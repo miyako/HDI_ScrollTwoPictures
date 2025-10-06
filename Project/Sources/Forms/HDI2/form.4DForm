@@ -1,0 +1,295 @@
+{
+	"destination": "detailScreen",
+	"windowTitle": "",
+	"width": 620,
+	"height": 480,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "595pt",
+		"paperHeight": "842pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"top": 10,
+					"left": 20,
+					"width": 580,
+					"height": 450,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Tab Control",
+					"dataSourceTypeHint": "arrayText",
+					"labels": [
+						"On Picture Scroll",
+						":xliff:Demo"
+					],
+					"class": "default",
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line": {
+					"type": "line",
+					"top": -10,
+					"left": 310,
+					"height": 515,
+					"visibility": "hidden",
+					"stroke": "#EB00EC",
+					"strokeDashArray": "6 2"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text1": {
+					"type": "text",
+					"top": 68,
+					"left": 40,
+					"width": 540,
+					"height": 60,
+					"class": "HDI",
+					"text": ":xliff:A new event is available for picture variables and fields :"
+				},
+				"Picture7": {
+					"type": "picture",
+					"top": 192,
+					"left": 119,
+					"width": 382,
+					"height": 188,
+					"pictureFormat": "scaled",
+					"picture": "Images/Picture7.png"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text5": {
+					"type": "text",
+					"top": 50,
+					"left": 40,
+					"width": 540,
+					"height": 76,
+					"class": "HDI",
+					"textAlign": "left",
+					"text": ":xliff:Each time the event \"on Picture Scroll\" is fired, just read the scroll position on picture \"1\" and apply the same values on picture \"2\" (and vice-versa ;o) !"
+				},
+				"Pict1": {
+					"type": "input",
+					"top": 150,
+					"left": 40,
+					"width": 260,
+					"height": 290,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "vPict1",
+					"dataSourceTypeHint": "picture",
+					"scrollbarVertical": "automatic",
+					"scrollbarHorizontal": "automatic",
+					"dragging": "custom",
+					"method": "ObjectMethods/Pict1.4dm",
+					"events": [
+						"onScroll"
+					]
+				},
+				"Pict2": {
+					"type": "input",
+					"top": 150,
+					"left": 320,
+					"width": 260,
+					"height": 290,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "vPict2",
+					"dataSourceTypeHint": "picture",
+					"scrollbarVertical": "automatic",
+					"scrollbarHorizontal": "automatic",
+					"dragging": "custom",
+					"method": "ObjectMethods/Pict2.4dm",
+					"events": [
+						"onScroll"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"LB2": {
+					"type": "listbox",
+					"top": 50,
+					"left": 40,
+					"width": 540,
+					"height": 352,
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "LB2",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"headerHeight": "17px",
+					"horizontalLineStroke": "#AAAAAA",
+					"verticalLineStroke": "#AAAAAA",
+					"stroke": "#000000",
+					"fill": "#EEEEEE",
+					"alternateFill": "#CCCCCC",
+					"rowStyleSource": "<>_LB_Styles",
+					"fontFamily": "Arial",
+					"fontSize": 16,
+					"columns": [
+						{
+							"name": "LB2_Col_1",
+							"dataSourceTypeHint": "number",
+							"width": 200,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#001274",
+							"fill": "#DFFFFF",
+							"alternateFill": "#C0FFFF",
+							"rowStrokeSource": "<>_ColorRow1",
+							"rowFillSource": "<>_BgndColorRow1",
+							"rowStyleSource": "<>_StyleRow1",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "Col1",
+								"dataSource": "Header1",
+								"stroke": "#000000",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer1",
+								"stroke": "#000000",
+								"fill": "#EEEEEE",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic",
+								"fontFamily": "Arial",
+								"fontSize": 16
+							}
+						},
+						{
+							"name": "LB2_Col_2",
+							"dataSourceTypeHint": "number",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#884500",
+							"fill": "#FFF0DF",
+							"alternateFill": "#FFE0C0",
+							"rowStrokeSource": "<>_ColorRow2",
+							"rowFillSource": "<>_BgndColorRow2",
+							"rowStyleSource": "<>_StyleRow2",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Col2",
+								"dataSource": "Col2",
+								"stroke": "#000000",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer2",
+								"stroke": "#000000",
+								"fill": "#EEEEEE",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic",
+								"fontFamily": "Arial",
+								"fontSize": 16
+							}
+						},
+						{
+							"name": "LB2_Col_3",
+							"dataSourceTypeHint": "number",
+							"width": 245,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#EEEEEE",
+							"alternateFill": "#CCCCCC",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Col3",
+								"dataSource": "Header3",
+								"stroke": "#000000",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer3",
+								"stroke": "#000000",
+								"fill": "#EEEEEE",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic",
+								"fontFamily": "Arial",
+								"fontSize": 16
+							}
+						}
+					]
+				},
+				"Button13": {
+					"type": "button",
+					"top": 422,
+					"left": 40,
+					"width": 280,
+					"height": 20,
+					"dataSource": "Button",
+					"text": "Move 1->2",
+					"method": "ObjectMethods/Button13.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

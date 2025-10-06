@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="7">
+	<com.4d>
+		<general startup_environnement="1"/>
+		<interface>
+			<user flush_window="false" splash_screen="false" print_progress="false"/>          </interface>
+		<database>
+			<cache size_maximum="100" size_reserved="128" size_fixed="32"/>
+			<misc standard_xpath="false"/>
+		</database>
+		<web>
+			<standalone_server>
+				<configuration allow_ssl="false" session_mode="3" automatic_session_management="true"/>
+				<misc/>
+				<options>
+					<cache use_4d_web_cache="false"/>
+				</options>
+			</standalone_server>
+			<remote>
+				<configuration allow_ssl="false" session_mode="3" automatic_session_management="true"/>
+				<misc/>
+				<options>
+					<cache use_4d_web_cache="false"/>
+				</options>
+			</remote>
+		</web>
+		<server>
+			<network>
+				<options use_legacy_network_layer="true"/>
+				<client_server use_encryption="false"/>
+			</network>
+		</server>
+		<deployment>
+			<options/>
+		</deployment>          </com.4d>  </preferences>
